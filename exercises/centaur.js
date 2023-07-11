@@ -53,16 +53,40 @@ class Centaur {
     }
   }
 
+  // drinkPotion() {
+  //   if (this.standing) {
+  //     if (!this.cranky) {
+  //       this.cranky = true;
+  //     } else {
+  //       this.activity = 0;
+  //       this.cranky = false;
+  //     }
+  //   } else {
+  //     return 'Not while I\'m laying down!'
+  //   }
+  // }
+
   drinkPotion() {
-    if (this.standing) {
-      if (!this.cranky) {
+    switch(this.statusChecker()) {
+      case "Standing and not cranky":
         this.cranky = true;
-      } else {
+        break;
+      case "Standing and cranky":
         this.activity = 0;
         this.cranky = false;
-      }
+        break;
+      case "Not standing":
+        return 'Not while I\'m laying down!';
+    }
+  }
+
+  statusChecker() {
+    if (this.layingDown) {
+      return "Not standing";
+    } else if (this.standing && this.cranky) {
+      return "Standing and cranky";
     } else {
-      return 'Not while I\'m laying down!'
+      return "Standing and not cranky";
     }
   }
 
