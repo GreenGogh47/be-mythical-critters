@@ -1,7 +1,11 @@
 class Victim {
   constructor(name) {
     this.name = name;
-    this.alive = true
+    this.alive = true;
+  }
+
+  kill() {
+    this.alive = false;
   }
 }
 
