@@ -45,7 +45,7 @@ These are the critters we are asking you to complete for pre-work.
 * `medusa`x
 * `werewolf`x
 * `centaur` x
-* `direwolf` 
+* `direwolf` x
 * `fairy`
 * `ogre`
 * `sphinx`
