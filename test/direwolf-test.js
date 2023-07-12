@@ -124,7 +124,7 @@ describe('Direwolf', function() {
     assert.equal(stark.houseWords(), 'Winter is Coming');
   });
 
-  it.skip('should change house words once protected', function() {
+  it('should change house words once protected', function() {
     var direwolf = new Direwolf('Nymeria', 'Dorn');
     var stark1 = new Stark('Arya', 'Dorn');
     var stark2 = new Stark('Sansa', 'Dorn');
@@ -140,7 +140,7 @@ describe('Direwolf', function() {
     assert.equal(stark2.houseWords(), 'Winter is Coming');
   });
 
-  it.skip('should hunt white walkers when not protecting Starks', function() {
+  it('should hunt white walkers when not protecting Starks', function() {
     var direwolf = new Direwolf('Nymeria', 'Winterfell');
     var stark = new Stark('Sansa');
 
@@ -150,7 +150,7 @@ describe('Direwolf', function() {
     assert.equal(direwolf.huntsWhiteWalkers, false);
   });
 
-  it.skip('should be able to stop protecting Starks', function() {
+  it('should be able to stop protecting Starks', function() {
     var direwolf1 = new Direwolf('Summer', 'Winterfell');
     var direwolf2 = new Direwolf('Lady', 'Winterfell');
     var stark1 = new Stark('Sansa');
